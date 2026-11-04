@@ -11,7 +11,13 @@ MAX_PLAUSIBLE_C = 60.0
 
 
 def celsius_to_fahrenheit(celsius: float) -> float:
-    """Convert Celsius to Fahrenheit."""
+    """Convert Celsius to Fahrenheit.
+
+Examples
+--------
+>>> celsius_to_fahrenheit(20)
+68.0
+"""
     if isinstance(celsius, bool) or not isinstance(celsius, (int, float)):
         raise TypeError("celsius must be a number")
     if celsius < ABSOLUTE_ZERO_C:
@@ -20,7 +26,13 @@ def celsius_to_fahrenheit(celsius: float) -> float:
 
 
 def summarize_temperatures(temps: list[float]) -> dict[str, float]:
-    """Summarize temperature readings, ignoring NaN values."""
+    """Summarize temperature readings, ignoring NaN values.
+
+    Examples
+    --------
+    >>> summarize_temperatures([10.0, 20.0, 30.0])
+    {'mean': 20.0, 'min': 10.0, 'max': 30.0, 'n_missing': 0}
+    """
     valid = [t for t in temps if not math.isnan(t)]
     if not valid:
         raise ValueError("no valid temperature readings")
