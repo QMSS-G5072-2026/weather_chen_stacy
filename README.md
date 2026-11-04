@@ -1,3 +1,4 @@
+[![CI](https://github.com/QMSS-G5072-2026/weather_chen_stacy/actions/workflows/ci.yml/badge.svg)](https://github.com/QMSS-G5072-2026/weather_chen_stacy/actions/workflows/ci.yml)
 # weather_yc4978
 
 Weather data processing utilities
